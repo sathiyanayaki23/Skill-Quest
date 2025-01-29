@@ -10,6 +10,7 @@ body {
 
 /* Style the navigation bar */
 .navbar {
+    
     background-color: #000000; /* Black background */
 }
 
@@ -21,6 +22,11 @@ body {
 /* Change link color on hover */
 .navbar .nav-link:hover {
     color: #cccccc; /* Light gray text on hover */
+}
+
+.nav-link i {
+    
+    margin-right: 8px;     /* Adds space between icon and text */
 }
 
 /* Main Container */
@@ -62,6 +68,7 @@ body {
 
 .card-body {
     padding: 20px;
+    margin:20px;
 }
 
 /* Quiz Styles */

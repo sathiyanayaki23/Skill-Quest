@@ -50,11 +50,12 @@
         </div>
         <div>
       
-            <a href="home.html" i class="fa fa-window-close" aria-hidden="true"></i></a>
+            <a href="D:\myapp\SkillQuest\index.html" i class="fa fa-window-close" aria-hidden="true"></i></a>
         </div>
         
         <!-- Question Box -->
         <div id="quizContainer" class="question-box">
+            <img src="D:\myapp\SkillQuest\assets\images\background-lesson.jpg" class="img-fluid mb-3" alt="back image">
             <h2 id="questionText" class="mb-4">Loading question...</h2>
             <div id="answersContainer">
                 <!-- Answer buttons will be injected here -->
@@ -151,26 +152,40 @@
             });
         }
 
-        // Function to check the selected answer
         function checkAnswer(selectedIndex) {
-            const question = questions[currentQuestionIndex];
+    const question = questions[currentQuestionIndex];
 
-            if (selectedIndex === question.correct) {
-                feedback.textContent = "Great job! 🎉 You got it right!";
-                feedback.style.color = "green";
-                score++;
-            } else {
-                feedback.textContent = "Oops, that's not quite right.";
-                feedback.style.color = "red";
-            }
+    // Disable all answer buttons to prevent multiple selections
+    const answerButtons = answersContainer.querySelectorAll('.answer');
+    answerButtons.forEach(button => {
+        button.disabled = true;
+    });
 
-            // Update progress bar
-            const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
-            progressBar.style.width = progress + "%";
-            progressBar.textContent = Math.round(progress) + "%";
+    if (selectedIndex === question.correct) {
+        feedback.textContent = "Great job! 🎉 You got it right!";
+        feedback.style.color = "green";
+        score++;
+    } else {
+        // Highlight the selected wrong answer
+        answerButtons[selectedIndex].style.backgroundColor = "#f8d7da"; // Light red
+        answerButtons[selectedIndex].style.color = "#721c24"; // Dark red text
 
-            nextButton.style.display = "block"; // Show "Next Question" button
-        }
+        // Highlight the correct answer
+        answerButtons[question.correct].style.backgroundColor = "#d4edda"; // Light green
+        answerButtons[question.correct].style.color = "#155724"; // Dark green text
+
+        feedback.textContent = `Oops, that's not quite right. The correct answer is: "${question.options[question.correct]}"`;
+        feedback.style.color = "red";
+    }
+
+    // Update progress bar
+    const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
+    progressBar.style.width = progress + "%";
+    progressBar.textContent = Math.round(progress) + "%";
+
+    nextButton.style.display = "block"; // Show "Next Question" button
+}
+
 
         // Function to load the next question
         function loadNextQuestion() {
