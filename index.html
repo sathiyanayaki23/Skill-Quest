@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillQuest - Level Up Your Knowledge Adventure</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white"  href="#">SkillQuest</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Guide</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content with Sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <i class="fa-solid fa-house"></i> Home
+                        </a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lessons/lesson1.html">
+                                <i class="fa-brands fa-leanpub"></i>Lessons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quiz/quiz1.html">
+                                <i class="fa-regular fa-sword"></i>Quizzes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Leaderboard</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Hero Section -->
+                <header class="text-center py-5 bg-primary text-white">
+                    <img src="assets/images/logo.png" alt=" Image" class="img-fluid rounded">
+                    <h1>Welcome to SkillQuest</h1>
+                    <p>Learn web development step by step in a fun and interactive way!</p>
+                    <a href="lessons/lesson1.html" class="btn btn-warning btn-lg">Start Learning</a>
+                </header>
+
+                <!-- Featured Lessons Section -->
+                <section class="container my-5">
+                    <h2 class="text-center">Featured Lessons</h2>
+                    <div class="row">
+                        <!-- Lesson 1 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/images/html.png" class="card-img-top" alt="HTML Lesson">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lesson 1: Introduction to HTML</h5>
+                                    <p class="card-text">Learn the basics of HTML and how to structure a webpage.</p>
+                                    <a href="lessons/lesson1.html" class="btn btn-primary">Start Lesson</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Lesson 2 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/images/css.png" class="card-img-top" alt="CSS Lesson">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lesson 2: Introduction to CSS</h5>
+                                    <p class="card-text">Style your webpages using CSS to make them look beautiful.</p>
+                                    <a href="lessons/lesson2.html" class="btn btn-primary">Start Lesson</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Lesson 3 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="assets/images/js.png" class="card-img-top" alt="JavaScript Lesson">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lesson 3: Introduction to JavaScript</h5>
+                                    <p class="card-text">Make your webpages interactive with JavaScript.</p>
+                                    <a href="lessons/lesson3.html" class="btn btn-primary">Start Lesson</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 SkillQuest. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

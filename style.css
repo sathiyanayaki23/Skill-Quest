@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #000000; /* Black background */
+}
+
+/* Style the navigation links */
+.navbar .nav-link {
+    color: #ffffff; /* White text */
+}
+
+/* Change link color on hover */
+.navbar .nav-link:hover {
+    color: #cccccc; /* Light gray text on hover */
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+}
+.lesson-container {
+    background: url("assets/images/background-lesson.jpg") no-repeat center center;
+    background-size: cover;
+    color: white; /* Ensure text is readable */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Lesson and Quiz Cards */
+.card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Quiz Styles */
+.form-check-label {
+    font-size: 1rem;
+}
+
+/* Quiz Result */
+#quizResult {
+    font-size: 1.2rem;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #28a745;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
